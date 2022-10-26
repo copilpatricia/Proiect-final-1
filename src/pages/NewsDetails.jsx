@@ -8,6 +8,7 @@ import { useFetch } from "../utils/hooks/useFetch";
 import { getNewsDetailsEndpoint } from "../api/endpoints";
 import { getNewsDetails } from "../api/adaptors";
 import Button from "react-bootstrap/Button";
+import Alert from "react-bootstrap/Alert";
 import styles from "./NewsDetails.module.css";
 import { getFormattedDate } from "../utils/date";
 import { addToFavorites } from "../store/Favorites/actions";
@@ -41,15 +42,16 @@ function NewsDetails() {
     favoritesDispatch(actionResult);
   }
 
-  function handleAddAlert(product) {
+  function handleAddAlert() {
     showAlert(true);
     setTimeout(() => {
       showAlert(false);
-    }, 3000);
+    }, 4000);
   }
 
   return (
     <Layout>
+      { alert && <Alert/> }
       <Container className={`${styles.newsDetails} my-5`}>
         <Row className="d-flex justify-content-center">
           <Col xs={12} lg={8}>

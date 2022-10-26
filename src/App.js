@@ -10,11 +10,10 @@ import NewsDetails from "./pages/NewsDetails";
 import { useReducer } from "react";
 import { FavoritesContext } from "./store/Favorites/context";
 import { initialState, favoritesReducer } from "./store/Favorites/reducer";
-import { useLocalStorage} from "./utils/hooks/useLocalStorage";
-
+import { useLocalStorage } from "./utils/hooks/useLocalStorage";
 
 function App() {
-  const favoriteNews = useLocalStorage(
+  const initialFavoritesNews = useLocalStorage(
     "displayFavoritesNews",
     initialState
   );
@@ -22,7 +21,7 @@ function App() {
   // Initializam reducerul pentru produse favorite.
   const [favoritesState, favoritesDispatch] = useReducer(
     favoritesReducer,
-    favoriteNews
+    initialFavoritesNews[0]
   );
   // Cream obiectul ce va fi pasat ca valoare contextului.
   const favoritesContextValue = {
