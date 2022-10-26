@@ -46,12 +46,12 @@ function NewsDetails() {
     showAlert(true);
     setTimeout(() => {
       showAlert(false);
-    }, 4000);
+    }, 2000);
   }
 
   return (
     <Layout>
-      { alert && <Alert/> }
+      {alert && <Alert />}
       <Container className={`${styles.newsDetails} my-5`}>
         <Row className="d-flex justify-content-center">
           <Col xs={12} lg={8}>
