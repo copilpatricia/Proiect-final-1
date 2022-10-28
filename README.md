@@ -4,7 +4,7 @@ The React project from my web development course @ IT School
 
 ## Demo
 
-The project is deployed here:
+The project is deployed here: https://it-school-news-pm.netlify.app
 
 ## Description
 

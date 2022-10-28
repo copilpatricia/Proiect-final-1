@@ -8,7 +8,7 @@ import { useFetch } from "../utils/hooks/useFetch";
 import { getNewsDetailsEndpoint } from "../api/endpoints";
 import { getNewsDetails } from "../api/adaptors";
 import Button from "react-bootstrap/Button";
-import Alert from "react-bootstrap/Alert";
+import Alert from "../components/Alert";
 import styles from "./NewsDetails.module.css";
 import { getFormattedDate } from "../utils/date";
 import { addToFavorites } from "../store/Favorites/actions";
